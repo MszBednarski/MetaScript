@@ -1,0 +1,38 @@
+scilla_version 0 
+
+(* Imagine we a contract address type specifying a subset of those fields *)
+
+(*? let SUBTYPE = "ByStr20 with contract field f1 : t11, field f2 : t12, ... end" *)
+(*? let CHECKS = "IsOperational; VerifyAdmin; Payment update fixed;" *)
+
+(* use it anywhere you want *)
+(* apply standard checks for admin operational and payment*)
+(*? 
+console.log("DIRNAME",__dirname)
+*)
+
+transition UpdateInit(addr: (*?= SUBTYPE *))
+(*?= CHECKS *)
+
+end
+
+transition SomeOtherTransition(addr: (*?= SUBTYPE *)))
+(*?= CHECKS *)
+
+end
+
+(* 
+  Define a macro!!!
+  flex actually defined in 
+  demo.js
+*)
+
+(*? 
+  const secureTransitionFactory = require("demo");
+  const SECURE = secureTransitionFactory(CHECKS);
+*)
+
+(*?= 
+  SECURE("SomeOtherTransition", "addr: ByStr20") 
+*)
+

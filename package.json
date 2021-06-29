@@ -25,6 +25,7 @@
   ],
   "dependencies": {
     "ascli": "~0.3",
+    "demo": "file://./tests/demo.js",
     "glob": "~3.2"
   },
   "devDependencies": {

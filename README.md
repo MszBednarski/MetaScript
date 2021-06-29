@@ -1,6 +1,23 @@
 ![MetaScript](https://raw.github.com/dcodeIO/MetaScript/master/MetaScript.png)
 ==============================================================================
 
+# BAM! :fire: NOW IT IS MetaScilla
+Change this:
+//? begins a line of meta.
+/*? begins a block of meta and */ ends it.
+//?... begins a snippet of meta and //?. ends it.
+?= writes the expression's raw result to the document.
+?== writes the expression's typed result to the document (runs it through JSON.stringify).
+
+Into this:
+IGNORE: //? begins a line of meta.
+(*? begins a block of meta and *) ends it.
+(*?... begins a snippet of meta and ?*) ends it.
+?= writes the expression's raw result to the document.
+?== writes the expression's typed result to the document (runs it through JSON.stringify).
+
+
+
 **Metaprogramming** is the writing of computer programs that write or manipulate other programs (or themselves) as their
 data, or that do part of the work at compile time that would otherwise be done at runtime.
 

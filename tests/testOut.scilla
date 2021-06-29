@@ -1,0 +1,25 @@
+scilla_version 0
+
+(* Imagine we a contract address type specifying a subset of those fields *)
+
+
+(* use it anywhere you want *)
+(* apply standard checks for admin operational and payment*)
+
+transition UpdateInit(addr: ByStr20 with contract field f1 : t11, field f2 : t12, ... end)
+IsOperational; VerifyAdmin; Payment update fixed;
+end
+
+transition SomeOtherTransition(addr: ByStr20 with contract field f1 : t11, field f2 : t12, ... end)
+IsOperational; VerifyAdmin; Payment update fixed;
+end
+
+(*
+  Define a macro!!!
+  flex actually defined in
+  demo.js
+*)
+
+
+transition SomeOtherTransition(addr: ByStr20)
+IsOperational; VerifyAdmin; Payment update fixed;

@@ -80,10 +80,10 @@ module.exports = (function() {
         source = source+"";
 
         var index = 0,                              // Current working index
-            expr = /(\/\/\?|\/\*\?)((?:=|\.\.\.)?)/g, // Line/block/snippet expression
+            expr = /(\(\*\?)((?:=|\.\.\.)?)/g, // block & snippet expression we dont do lines here
             exprLine = /(\r?\n|$)/g,                // Line terminator
-            exprBlock = /\*\//g,                    // Block terminator
-            exprEnd = /(\/\/\?\.(?:\r?\n|$))/g,     // Snippet terminator
+            exprBlock = /\*\)/g,                    // Block terminator
+            exprEnd = /(\?\*\)(?:\r?\n|$))/g,     // Snippet terminator
             exprEmpty = /(^|\n)([ \t]*)$/,          // Empty line expression
             match, matchEnd,                        // Matches
             s,                                      // Temporary string
