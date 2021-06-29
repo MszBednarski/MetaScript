@@ -1,6 +1,3 @@
-![MetaScript](https://raw.github.com/dcodeIO/MetaScript/master/MetaScript.png)
-==============================================================================
-
 # BAM! :fire: NOW IT IS MetaScilla
 Change this:
 //? begins a line of meta.
